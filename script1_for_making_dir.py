@@ -30,6 +30,11 @@ def making_new_directory():
     # Now I have to cheack for and create a new directory if it doesn't exist
     current_directory = current_directory + str("\\") + user_name + str("\\")
     # This will be the new path of the directory
+
+    #The below code copies the current_directory ie the main user directory path and copies it into a text file so that other files can also use that text file.
+    f = open('main_directory_path.txt', 'w+')
+    f.write(current_directory)
+    f.close()
     print(current_directory)
 
     # Now I have to check whether this path exists
